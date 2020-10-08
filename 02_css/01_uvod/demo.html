@@ -6,14 +6,50 @@
     <title>Ukázka CSS</title>
 
     <style>
+        /* * {color: green} */
+
         body {
-            color: white;
+            /* color: white; */
             font-size: 12pt;
-            background-color: black;
+            /* background-color: black; */
             font-family: Georgia, 'Times New Roman', Times, serif; 
         }
         h2 {
-            font-size: 5rem;
+            font-size: 2rem;
+            font-variant: small-caps;
+            text-decoration: underline;
+        }
+        /* h1 {
+            font-style: normal;
+        } */
+        #hlavni_nadpis { 
+            color: violet 
+        }
+        p {
+            font-style: italic;
+            /* font-variant: small-caps; */
+        }
+        a {
+            font-style: normal;
+            font-weight:bold;
+        }
+        span {
+            /* text-decoration: underline;
+            color: blue; */
+        }
+        .dulezite {
+            color: red; font-weight: bold
+        }
+        p.poznamka {
+            font-size: x-small
+        }
+
+        ol a {
+            color: green;
+        }
+
+        ol.seznam > li > a {
+            font-style: italic;
         }
 
     </style>
@@ -21,12 +57,25 @@
 </head>
 <body>
     <h1>Nadpis</h1>
+    <h1 id="hlavni_nadpis">Naše firma</h1>
 
     <h2>Podnadpis</h2>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium expedita doloremque error maxime dignissimos voluptate asperiores iste, unde facere ex aperiam possimus animi assumenda placeat corrupti ducimus? Illo, quaerat earum.</p>
+    <ol class="seznam">
+        <li>jedna</li>
+        <li>dva</li>
+        <li>tri a <a href="#">ctyri</a></li>
+        <li>pet a <span><a href="#">sest</a></span></li>
+    </ol>
+    <p class="dulezite">Kdo to ukradne, tomu upadne!</p>
+    <p>Karel jel na vodu, ale vrátil se už <div class="dulezite">za dva dny!</div>.</p>
+    <p class="poznamka">Předchozí text byl převzat z původní německé verze</p>
+
+
+
+    <p>Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit. Praesentium expedita doloremque error maxime dignissimos voluptate asperiores iste, unde facere ex aperiam possimus animi assumenda placeat corrupti ducimus? Illo, quaerat earum.</p>
     <p style='color: red;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis ea illum deleniti eos odit, consequuntur alias laborum numquam sint tempore. Ullam asperiores ut sapiente eum laborum beatae dolorem nemo.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis nulla pariatur dolorem minima voluptatibus optio! Assumenda, eveniet autem corporis nesciunt libero, earum ea, dolores cupiditate reiciendis nemo commodi consequatur.</p>
+    <p>Lorem <a href="#">ipsum</a> dolor sit amet consectetur adipisicing elit. Ipsam officiis nulla pariatur dolorem minima voluptatibus optio! Assumenda, eveniet autem corporis nesciunt libero, earum ea, dolores cupiditate reiciendis nemo commodi consequatur.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, consequuntur repudiandae? Officiis, quae nobis consectetur, necessitatibus deserunt reprehenderit, velit sunt beatae est veritatis at nisi nesciunt culpa mollitia consequatur quis.</p>
 
     <h2>Další podnadpis</h2>
